@@ -27,11 +27,15 @@ $ mkvirtualenv wordcounts`
 $ pip install -r requirements.txt
 ```
 
-**Add Env Variables**
+**Create Post Activate file**
 
 ```sh
-$ export APP_SETTINGS="config.DevelopmentConfig"
-$ export DATABASE_URL="postgresql://localhost/wordcount_dev"
+# create the file in vim
+vi $VIRTUAL_ENV/bin/postactivate
+# add the following to the file
+cd ~/path/to/your/project
+export APP_SETTINGS="config.DevelopmentConfig"
+export DATABASE_URL="postgresql://localhost/wordcount_dev"
 ```
 
 **Setup Migrations**
